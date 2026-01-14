@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu Go App - Restaurant Menus</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="home">
+    <header class="site-header">
+      <div class="brand">
+        <a href="index.html" aria-label="Menu Go App home">
+          <img class="brand-mark" src="menugoapp_logo.png" alt="Menu Go App logo" />
+        </a>
+      </div>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+      <label class="nav-burger" for="nav-toggle" aria-label="Toggle menu">
+        <img src="hamburgermenu.svg" alt="" class="nav-icon" />
+      </label>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="#menus">Menus</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Discover</p>
+          <h1>Find a restaurant menu in one click.</h1>
+          <p class="lead">
+            Menu Go App hosts curated menus with clean categories, prices, and notes.
+            Share with friends or bookmark your go-to places.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn primary"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd_UkvjowhK9aoWMyvqyP0KgdS6GCLaADV0MBR5x3F3bO-Ncg/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener"
+            >
+              Create your free menu
+            </a>
+            <a class="btn ghost" href="#about">How it works</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <div class="panel-card">
+            <div class="panel-carousel">
+              <div class="panel-slide">
+                <div class="panel-title">
+                  <img class="panel-flag" src="languagesvg/uk.svg" alt="English" />
+                  English
+                </div>
+                <div class="panel-row">
+                  <span>Charred octopus</span>
+                  <span>&euro;14</span>
+                </div>
+                <div class="panel-row">
+                  <span>Truffle gnocchi</span>
+                  <span>&euro;22</span>
+                </div>
+                <div class="panel-row">
+                  <span>Sea salt gelato</span>
+                  <span>&euro;9</span>
+                </div>
+              </div>
+              <div class="panel-slide">
+                <div class="panel-title">
+                  <img class="panel-flag" src="languagesvg/nl.svg" alt="Nederlands" />
+                  Nederlands
+                </div>
+                <div class="panel-row">
+                  <span>Gegrilde octopus</span>
+                  <span>&euro;14</span>
+                </div>
+                <div class="panel-row">
+                  <span>Truffel gnocchi</span>
+                  <span>&euro;22</span>
+                </div>
+                <div class="panel-row">
+                  <span>Zeezout gelato</span>
+                  <span>&euro;9</span>
+                </div>
+              </div>
+              <div class="panel-slide">
+                <div class="panel-title">
+                  <img class="panel-flag" src="languagesvg/sp.svg" alt="Espanol" />
+                  Espanol
+                </div>
+                <div class="panel-row">
+                  <span>Pulpo a la parrilla</span>
+                  <span>&euro;14</span>
+                </div>
+                <div class="panel-row">
+                  <span>Nocchi de trufa</span>
+                  <span>&euro;22</span>
+                </div>
+                <div class="panel-row">
+                  <span>Helado de sal marina</span>
+                  <span>&euro;9</span>
+                </div>
+              </div>
+            </div>
+            <div class="panel-caption">Your menus in every language.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section id="menus" class="menu-grid">
+        <a class="menu-card" href="menus/osteria.html">
+          <div class="menu-tag">Italian</div>
+          <h2>Osteria Verde</h2>
+          <p>House-made pasta, seasonal plates, and a cozy wine list.</p>
+          <span class="btn small">View menu</span>
+        </a>
+        <a class="menu-card" href="menus/harbor.html">
+          <div class="menu-tag">Seafood</div>
+          <h2>Harbor &amp; Tide</h2>
+          <p>Fresh catch, coastal classics, and bright citrus flavors.</p>
+          <span class="btn small">View menu</span>
+        </a>
+        <a class="menu-card" href="menus/solstice.html">
+          <div class="menu-tag">Grill</div>
+          <h2>Solstice Grill</h2>
+          <p>Wood-fired mains, bold rubs, and slow-roasted sides.</p>
+          <span class="btn small">View menu</span>
+        </a>
+      </section>
+
+      <section id="about" class="about">
+        <div>
+          <h2>Built for guests and restaurants.</h2>
+          <p>
+            Each menu page is a lightweight subpage that you can share or embed.
+            Keep a consistent look across restaurants with flexible sections.
+          </p>
+          <p class="about-note">
+            Email us your menu and we will upload it in 24 hours.
+          </p>
+        </div>
+        <div class="about-list">
+          <div>
+            <h3>Fast to scan</h3>
+            <p>Clear headings and price alignment help guests decide quickly.</p>
+          </div>
+          <div>
+            <h3>Mobile friendly</h3>
+            <p>Cards stack cleanly and sections stay readable on small screens.</p>
+          </div>
+          <div>
+            <h3>Easy to expand</h3>
+            <p>Add more restaurant pages by copying a template and editing.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="pricing-header">
+          <p class="eyebrow">Pricing</p>
+          <h2>Simple, transparent setup.</h2>
+          <p class="lead">Everything you need to publish your menu fast.</p>
+        </div>
+        <div class="pricing-tabs" role="tablist" aria-label="Pricing options">
+          <button class="pricing-tab active" role="tab" aria-selected="true">
+            Menu page
+          </button>
+          <button class="pricing-tab" role="tab" aria-selected="false">
+            Extra language
+          </button>
+          <button class="pricing-tab" role="tab" aria-selected="false">
+            Translation
+          </button>
+          <button class="pricing-tab" role="tab" aria-selected="false">
+            Future changes
+          </button>
+        </div>
+        <div class="pricing-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Offer</th>
+                <th>Price</th>
+                <th>What&#39;s included</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight">
+                <td>Menu on Menu Go App</td>
+                <td>Free</td>
+                <td>Dedicated subpage with QR code included.</td>
+              </tr>
+              <tr>
+                <td>Extra language</td>
+                <td>&euro;20</td>
+                <td>Add another language version of your menu.</td>
+              </tr>
+              <tr>
+                <td>Translation</td>
+                <td>&euro;40</td>
+                <td>Full professional translation of menu content.</td>
+              </tr>
+              <tr>
+                <td>Future changes</td>
+                <td>&euro;8</td>
+                <td>Per change request after launch.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pricing-cta"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Menu Go App 2026. A simple multi-page menu host.</p>
+    </footer>
+    <div class="home-cta-float">
+      <a
+        class="btn primary"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd_UkvjowhK9aoWMyvqyP0KgdS6GCLaADV0MBR5x3F3bO-Ncg/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noopener"
+      >
+        Create your free menu
+      </a>
+    </div>
+    <script>
+      (function () {
+        if (!document.body.classList.contains("home")) {
+          return;
+        }
+        function onScroll() {
+          document.body.classList.toggle("scrolled", window.scrollY > 60);
+        }
+        onScroll();
+        window.addEventListener("scroll", onScroll, { passive: true });
+      })();
+    </script>
+  </body>
+</html>
