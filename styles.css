@@ -449,6 +449,52 @@ body.home.scrolled .home-cta-float {
   margin-bottom: 6px;
 }
 
+.embed {
+  margin: 0 auto 56px;
+  max-width: 1000px;
+  padding: 0 12px;
+}
+
+.embed-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(31, 41, 51, 0.1);
+  box-shadow: 0 12px 28px rgba(15, 79, 58, 0.12);
+}
+
+.embed h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.embed p {
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.embed-steps {
+  margin: 0 0 16px 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 6px;
+}
+
+.embed pre {
+  background: #f7f7f7;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid rgba(31, 41, 51, 0.08);
+  overflow: auto;
+  font-size: 13px;
+}
+
+.embed-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
 .site-footer {
   margin-top: 56px;
   text-align: center;
@@ -551,6 +597,10 @@ body.home.scrolled .home-cta-float {
   opacity: 1;
   transform: translate(-50%, 0);
   pointer-events: auto;
+}
+
+.demo-cta.show:hover {
+  transform: translate(-50%, -2px);
 }
 .pricing {
   margin: 0 auto 56px;
