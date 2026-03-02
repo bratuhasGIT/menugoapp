@@ -570,7 +570,7 @@
         <div class="qr-card">
           <h2>Scan this menu</h2>
           <p>Open or share this menu instantly on your phone.</p>
-          <img class="qr-image" alt="QR code for this menu" />
+          <img class="qr-image" alt="QR code for this menu" data-qr-slug="harbor" />
         </div>
       </section>
     </main>
@@ -674,11 +674,14 @@
         if (!img) {
           return;
         }
-        if (window.location.protocol === "file:") {
-          return;
-        }
-        var url = encodeURIComponent(window.location.href);
-        img.src = "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" + url;
+        var slug = img.getAttribute("data-qr-slug") || "menu";
+        var localSrc = "qr/" + slug + ".svg";
+        img.src = localSrc;
+        img.onerror = function () {
+          var url = encodeURIComponent(window.location.href);
+          img.src =
+            "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" + url;
+        };
       })();
     </script>
     <script>

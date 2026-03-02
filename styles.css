@@ -497,6 +497,7 @@ body.home.scrolled .home-cta-float {
 
 .site-footer {
   margin-top: 56px;
+  margin-bottom: 90px;
   text-align: center;
   font-size: 13px;
   color: var(--muted);
@@ -716,6 +717,107 @@ body.home.scrolled .home-cta-float {
   justify-content: center;
   margin-top: 8px;
 }
+
+.pricing-card-vertical {
+  width: min(520px, 100%);
+  margin: 0 auto 20px;
+  padding: 26px 24px;
+  background: #fff;
+  border-radius: 24px;
+  border: 1px solid rgba(27, 26, 23, 0.1);
+  box-shadow: 0 16px 34px rgba(27, 26, 23, 0.12);
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
+
+.pricing-card-vertical h3 {
+  font-size: 22px;
+}
+
+.pricing-card-vertical .card-lead {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.billing-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  border: 1px solid rgba(27, 26, 23, 0.2);
+  background: #fff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.toggle-btn.active {
+  background: var(--rust);
+  color: var(--forest);
+  border-color: var(--rust);
+}
+
+.price-stack {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  color: var(--forest);
+}
+
+.price-amount {
+  font-size: 28px;
+}
+
+.price-unit {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.price-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.discount-highlight {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.card-includes {
+  padding-top: 10px;
+  border-top: 1px solid rgba(27, 26, 23, 0.08);
+}
+
+.card-includes h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.includes-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+  text-align: left;
+  color: var(--muted);
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
 
 .qr-section {
   margin: 32px auto 0;

@@ -4,6 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Menu Go App - Restaurant Menus</title>
+    <meta
+      name="description"
+      content="Publish a restaurant menu in one click. Menu Go App delivers clean, readable menus with QR codes and easy sharing for guests."
+    />
+    <link rel="canonical" href="https://menugoapp.com/" />
     <link rel="icon" href="favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -232,6 +237,38 @@
             </tbody>
           </table>
         </div>
+        <div class="pricing-card-vertical" aria-label="New restaurant support">
+          <p class="eyebrow">New restaurants</p>
+          <h3>Starting out? We&#39;re here to help.</h3>
+          <p class="card-lead">
+            A special subscription built for new restaurants taking their next step.
+          </p>
+          <div class="billing-toggle" role="group" aria-label="Choose billing period">
+            <button class="toggle-btn active" type="button" data-billing="monthly">
+              Monthly
+            </button>
+            <button class="toggle-btn" type="button" data-billing="yearly">
+              Yearly (20% off)
+            </button>
+          </div>
+          <div class="price-stack">
+            <span class="price-amount" data-price-amount>&euro;14.90</span>
+            <span class="price-unit" data-price-unit>/ month</span>
+          </div>
+          <p class="price-note" data-price-note>
+            Pay upfront &euro;143.12 / year (VAT included) and save
+            <span class="discount-highlight">20%</span> (&euro;35.78).
+          </p>
+          <div class="card-includes">
+            <h4>Includes</h4>
+            <ul class="includes-list">
+              <li>2 languages</li>
+              <li>Translation</li>
+              <li>Dedicated QR code</li>
+              <li>Up to 30 changes per month</li>
+            </ul>
+          </div>
+        </div>
         <div class="pricing-cta"></div>
       </section>
     </main>
@@ -259,6 +296,52 @@
         }
         onScroll();
         window.addEventListener("scroll", onScroll, { passive: true });
+
+        const billingToggles = document.querySelectorAll(
+          ".billing-toggle [data-billing]"
+        );
+        if (billingToggles.length) {
+          const monthly = 14.9;
+          const savings = 35.78;
+          const yearly = 143.12;
+          const priceAmount = document.querySelector("[data-price-amount]");
+          const priceUnit = document.querySelector("[data-price-unit]");
+          const priceNote = document.querySelector("[data-price-note]");
+          const formatEuro = (value) => `€${Number(value).toFixed(2)}`;
+
+          const updateCard = (mode) => {
+            billingToggles.forEach((btn) => {
+              const isActive = btn.dataset.billing === mode;
+              btn.classList.toggle("active", isActive);
+              btn.setAttribute("aria-pressed", isActive ? "true" : "false");
+            });
+            if (priceAmount) {
+              priceAmount.textContent =
+                mode === "yearly" ? formatEuro(yearly) : formatEuro(monthly);
+            }
+            if (priceUnit) {
+              priceUnit.textContent = mode === "yearly" ? "/ year" : "/ month";
+            }
+            if (priceNote) {
+              priceNote.innerHTML =
+                mode === "yearly"
+                  ? `Pay upfront ${formatEuro(
+                      yearly
+                    )} / year (VAT included) and save <span class="discount-highlight">20%</span> (${formatEuro(
+                      savings
+                    )}).`
+                  : `Monthly billing at ${formatEuro(
+                      monthly
+                    )}. Switch to yearly upfront and save <span class="discount-highlight">20%</span>.`;
+            }
+          };
+
+          billingToggles.forEach((btn) => {
+            btn.addEventListener("click", () => updateCard(btn.dataset.billing));
+          });
+
+          updateCard("monthly");
+        }
       })();
     </script>
   </body>
